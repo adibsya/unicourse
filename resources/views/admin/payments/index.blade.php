@@ -1,4 +1,4 @@
-﻿<x-admin-layout>
+<x-admin-layout>
     <h1 class="text-2xl font-bold text-gray-900 mb-6">Payments</h1>
 
     <!-- Filters -->

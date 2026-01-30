@@ -1,4 +1,4 @@
-﻿<x-app-layout>
+<x-app-layout>
     <div class="bg-gray-50 min-h-screen">
         <!-- Course Header -->
         <div class="bg-gradient-to-r from-navy-900 via-navy-800 to-navy-700 py-12">

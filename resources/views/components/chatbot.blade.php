@@ -1,4 +1,4 @@
-﻿<!-- Chatbot Toggle Button -->
+<!-- Chatbot Toggle Button -->
 <div id="chatbot-toggle" 
      class="fixed bottom-6 right-6 bg-navy-900 text-white p-4 rounded-full shadow-lg cursor-pointer hover:bg-navy-800 transition z-50 hover:scale-105">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

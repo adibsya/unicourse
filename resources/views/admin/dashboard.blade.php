@@ -1,4 +1,4 @@
-﻿<x-admin-layout>
+<x-admin-layout>
     <div class="mb-8">
         <h1 class="text-2xl font-bold text-navy-900">Dashboard</h1>
         <p class="text-gray-600">Welcome back! Here's an overview of your platform.</p>
