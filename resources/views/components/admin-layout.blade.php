@@ -16,7 +16,7 @@
         <!-- Sidebar -->
         <div class="fixed inset-y-0 left-0 z-50 w-64 bg-navy-900">
             <div class="flex h-16 items-center px-6 border-b border-navy-800">
-                <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-8 w-auto brightness-0 invert">
+                <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-12 w-auto brightness-0 invert">
             </div>
             <nav class="mt-6 px-3">
                 <a href="{{ route('admin.dashboard') }}" 

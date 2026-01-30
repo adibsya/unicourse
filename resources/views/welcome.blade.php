@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -12,10 +12,10 @@
     <!-- Navigation - Coursera Style -->
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between items-center h-24">
                 <div class="flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center">
-                        <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-10 w-auto">
+                        <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-14 w-auto">
                     </a>
                     <div class="hidden md:flex ml-10 space-x-8">
                         <a href="{{ route('courses.index') }}" class="text-gray-600 hover:text-navy-900 font-medium transition">
@@ -53,7 +53,7 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gold-500 text-navy-900 mb-6">
-                        ðŸŽ“ Start Learning Today
+                        🎓 Start Learning Today
                     </span>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                         Learn without limits
@@ -78,7 +78,7 @@
                         <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-navy-400 rounded-full opacity-20 blur-3xl"></div>
                         <div class="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                             <div class="text-center">
-                                <div class="text-6xl mb-4">ðŸ“š</div>
+                                <div class="text-6xl mb-4">📚</div>
                                 <div class="text-white text-lg font-semibold">Quality Education</div>
                                 <div class="text-navy-200 text-sm mt-2">Affordable & Accessible</div>
                             </div>
@@ -176,7 +176,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div class="col-span-2 md:col-span-1">
-                    <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-12 w-auto mb-4 brightness-0 invert">
+                    <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-16 w-auto mb-4">
                     <p class="text-sm leading-relaxed">Your gateway to knowledge. Learn new skills, advance your career, and achieve your goals.</p>
                 </div>
                 <div>
