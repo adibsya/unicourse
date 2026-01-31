@@ -168,7 +168,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div class="col-span-2 md:col-span-1">
-                    <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-16 w-auto mb-4">
+                    <div class="bg-white rounded-2xl p-3 shadow-lg inline-block mb-4">
+                        <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-12 w-auto">
+                    </div>
                     <p class="text-sm leading-relaxed">Your gateway to knowledge. Learn new skills, advance your career, and achieve your goals.</p>
                 </div>
                 <div>

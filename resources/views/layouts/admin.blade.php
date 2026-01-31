@@ -18,8 +18,10 @@
     <div class="min-h-screen bg-gray-100">
         <!-- Sidebar -->
         <div class="fixed inset-y-0 left-0 z-50 w-64 bg-gray-900">
-            <div class="flex h-16 items-center justify-center">
-                <span class="text-xl font-bold text-white">Unicourse Admin</span>
+            <div class="flex h-20 items-center justify-center px-4">
+                <a href="{{ route('admin.dashboard') }}" class="bg-white rounded-xl p-2 shadow-lg">
+                    <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-10 w-auto">
+                </a>
             </div>
             <nav class="mt-6 px-3">
                 <a href="{{ route('admin.dashboard') }}" 

@@ -25,8 +25,8 @@
                 
                 <!-- Content -->
                 <div class="relative z-10 flex flex-col justify-center items-center w-full px-12">
-                    <a href="{{ route('home') }}" class="mb-8 bg-white rounded-2xl p-4 shadow-lg">
-                        <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-16 w-auto">
+                    <a href="{{ route('home') }}" class="mb-8 bg-white rounded-2xl p-5 shadow-lg">
+                        <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-24 w-auto">
                     </a>
                     <h1 class="text-4xl font-bold text-white mb-4 text-center">Welcome to Unicourse</h1>
                     <p class="text-navy-200 text-lg text-center max-w-md leading-relaxed">

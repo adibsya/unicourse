@@ -50,6 +50,8 @@ Route::middleware('auth')->group(function () {
     // Payment
     Route::get('/payments/{enrollment}', [PaymentController::class, 'show'])->name('payments.show');
     Route::post('/payments/{enrollment}', [PaymentController::class, 'store'])->name('payments.store');
+    Route::post('/payments/{enrollment}/process', [PaymentController::class, 'process'])->name('payments.process');
+    Route::get('/payments/{enrollment}/success', [PaymentController::class, 'success'])->name('payments.success');
 });
 
 /*
