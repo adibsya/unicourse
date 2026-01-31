@@ -21,6 +21,29 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+// Temporary setup route for Railway deployment
+Route::get('/deploy-setup', function () {
+    try {
+        // Run migration just in case
+        \Illuminate\Support\Facades\Artisan::call('migrate --force');
+        \Illuminate\Support\Facades\Artisan::call('storage:link');
+        
+        // Create Admin User
+        $user = \App\Models\User::firstOrCreate(
+            ['email' => 'admin@unicourse.com'],
+            [
+                'name' => 'Super Admin',
+                'password' => bcrypt('password123'),
+                'role' => 'admin'
+            ]
+        );
+        
+        return "Setup Complete! <br>Admin: admin@unicourse.com / password123 <br>Migration status: " . \Illuminate\Support\Facades\Artisan::output();
+    } catch (\Exception $e) {
+        return "Error: " . $e->getMessage();
+    }
+});
+
 // Public course listing
 Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
 Route::get('/courses/{course}', [CourseController::class, 'show'])->name('courses.show');
