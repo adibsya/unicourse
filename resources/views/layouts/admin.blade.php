@@ -18,11 +18,21 @@
     <div class="min-h-screen bg-gray-100">
         <!-- Sidebar -->
         <div class="fixed inset-y-0 left-0 z-50 w-64 bg-gray-900">
-            <div class="flex h-20 items-center justify-center px-4">
-                <a href="{{ route('admin.dashboard') }}" class="bg-white rounded-xl p-2 shadow-lg">
-                    <img src="{{ asset('images/logo.png') }}" alt="Unicourse" class="h-10 w-auto">
+            <!-- Logo Section -->
+            <div class="h-24 flex items-center justify-center px-4 border-b border-gray-800">
+                <a href="{{ route('admin.dashboard') }}" class="block">
+                    <div class="bg-white rounded-xl p-3 shadow-lg">
+                        <img 
+                            src="{{ asset('images/logo.png') }}" 
+                            alt="Unicourse Logo" 
+                            class="h-14 w-auto"
+                            style="display: block; max-width: 180px;"
+                        >
+                    </div>
                 </a>
             </div>
+            
+            <!-- Navigation -->
             <nav class="mt-6 px-3">
                 <a href="{{ route('admin.dashboard') }}" 
                    class="flex items-center px-4 py-2 rounded-lg {{ request()->routeIs('admin.dashboard') ? 'bg-gray-800 text-white' : 'text-gray-300 hover:bg-gray-800 hover:text-white' }}">
@@ -73,12 +83,18 @@
         <!-- Main Content -->
         <div class="pl-64">
             <!-- Top Bar -->
-            <div class="h-16 bg-white shadow flex items-center justify-end px-6">
-                <div class="flex items-center">
-                    <span class="text-gray-700 mr-4">{{ Auth::user()->name }}</span>
+            <div class="h-16 bg-white shadow flex items-center justify-between px-6">
+                <span class="text-gray-600 font-medium">Admin Panel</span>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-navy-700 to-navy-900 flex items-center justify-center text-white font-semibold text-sm mr-2">
+                            {{ substr(Auth::user()->name, 0, 1) }}
+                        </div>
+                        <span class="text-gray-700">{{ Auth::user()->name }}</span>
+                    </div>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="text-gray-500 hover:text-gray-700">
+                        <button type="submit" class="text-gray-500 hover:text-red-600 transition-colors">
                             Logout
                         </button>
                     </form>

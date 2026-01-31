@@ -11,13 +11,20 @@ class CourseController extends Controller
     /**
      * Display a listing of courses.
      */
-    public function index()
+    public function index(Request $request)
     {
+        $search = $request->query('search');
+        
         $courses = Course::withCount('enrollments')
+            ->when($search, function ($query, $search) {
+                $query->where('title', 'like', "%{$search}%")
+                      ->orWhere('description', 'like', "%{$search}%");
+            })
             ->latest()
-            ->paginate(15);
+            ->paginate(10)
+            ->withQueryString();
 
-        return view('admin.courses.index', compact('courses'));
+        return view('admin.courses.index', compact('courses', 'search'));
     }
 
     /**
