@@ -115,4 +115,4 @@ Project ini sudah dilengkapi dengan `nixpacks.toml` dan `Procfile` untuk deploym
 
 ---
 
-_Dibuat dengan ❤️ oleh Tim Unicourse_
+_Dibuat dengan ❤️ oleh Ahmad Adib
