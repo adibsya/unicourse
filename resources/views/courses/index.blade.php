@@ -30,26 +30,37 @@
             <!-- Course Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @forelse($courses as $course)
+                    @php
+                        // Available images for courses
+                        $images = [
+                            'webdev.png',
+                            'UX-design-courses.png',
+                            'digital-marketing-definition-new.png',
+                            'mobile-app-development.png',
+                        ];
+                        // Assign image based on course ID or title
+                        $imageIndex = $loop->index % count($images);
+                        $courseImage = $images[$imageIndex];
+                    @endphp
                     <!-- Entire card is clickable -->
                     <a href="{{ route('courses.show', $course) }}" 
-                       class="block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group hover:-translate-y-1 cursor-pointer">
-                        <!-- Course Image Placeholder -->
-                        <div class="h-40 bg-gradient-to-br from-navy-800 to-navy-600 relative overflow-hidden">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <svg class="w-16 h-16 text-white/30 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
-                            </div>
+                       class="block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 ease-out overflow-hidden border border-gray-100 group hover:-translate-y-2 cursor-pointer">
+                        <!-- Course Image -->
+                        <div class="h-44 relative overflow-hidden">
+                            <img src="{{ asset('images/' . $courseImage) }}" 
+                                 alt="{{ $course->title }}" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out">
                             <!-- Badge -->
                             <div class="absolute top-3 left-3">
-                                <span class="bg-gold-500 text-navy-900 text-xs font-semibold px-2 py-1 rounded">
+                                <span class="bg-gold-500 text-navy-900 text-xs font-semibold px-2 py-1 rounded shadow">
                                     Course
                                 </span>
                             </div>
                             <!-- Hover overlay -->
-                            <div class="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/20 transition-all duration-300 flex items-center justify-center">
-                                <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 text-navy-900 px-4 py-2 rounded-full font-medium text-sm">
-                                    View Course →
+                            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                                <span class="bg-white text-navy-900 px-4 py-2 rounded-full font-medium text-sm shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                    View Course
+                                    <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                                 </span>
                             </div>
                         </div>

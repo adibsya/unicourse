@@ -68,7 +68,7 @@
         <div class="bg-white rounded-xl shadow-sm border border-gray-100">
             <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
                 <h2 class="text-lg font-semibold text-navy-900">Pending Payments</h2>
-                <a href="{{ route('admin.payments.index') }}?status=pending" class="text-sm text-navy-600 hover:text-navy-800 font-medium">View all â†’</a>
+                <a href="{{ route('admin.payments.index') }}?status=pending" class="text-sm text-navy-600 hover:text-navy-800 font-medium inline-flex items-center">View all <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
             </div>
             <div class="p-6">
                 @forelse($pendingPayments as $payment)
@@ -104,7 +104,7 @@
         <div class="bg-white rounded-xl shadow-sm border border-gray-100">
             <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
                 <h2 class="text-lg font-semibold text-navy-900">Recent Enrollments</h2>
-                <a href="{{ route('admin.enrollments.index') }}" class="text-sm text-navy-600 hover:text-navy-800 font-medium">View all â†’</a>
+                <a href="{{ route('admin.enrollments.index') }}" class="text-sm text-navy-600 hover:text-navy-800 font-medium inline-flex items-center">View all <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
             </div>
             <div class="p-6">
                 @forelse($recentEnrollments as $enrollment)
