@@ -32,7 +32,7 @@ Route::get('/courses/{course}', [CourseController::class, 'show'])->name('course
 
 Route::get('/dashboard', function () {
     return redirect()->route('my-courses');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     // Profile routes

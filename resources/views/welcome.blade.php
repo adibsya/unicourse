@@ -73,17 +73,9 @@
                     </div>
                 </div>
                 <div class="hidden md:block">
-                    <div class="relative">
-                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-gold-500 rounded-full opacity-20 blur-3xl"></div>
-                        <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-navy-400 rounded-full opacity-20 blur-3xl"></div>
-                        <div class="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                            <div class="text-center">
-                                <div class="text-6xl mb-4">📚</div>
-                                <div class="text-white text-lg font-semibold">Quality Education</div>
-                                <div class="text-navy-200 text-sm mt-2">Affordable & Accessible</div>
-                            </div>
+                        <div class="relative">
+                            <img src="{{ asset('images/hero.png') }}" alt="Learning" class="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition duration-500">
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
