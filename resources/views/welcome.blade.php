@@ -65,7 +65,7 @@
                 <div class="hidden sm:flex items-center gap-3">
                     @auth
                         <!-- Notification Bell -->
-                        <button class="relative p-2 text-gray-500 hover:text-navy-600 hover:bg-gray-100 rounded-full transition-all duration-300">
+                        <button type="button" class="relative p-2 text-gray-500 hover:text-navy-600 hover:bg-gray-100 rounded-full transition-all duration-300">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
                             </svg>
@@ -74,7 +74,7 @@
 
                         <!-- User Dropdown -->
                         <div x-data="{ userOpen: false }" class="relative">
-                            <button @click="userOpen = !userOpen" 
+                            <button type="button" @click="userOpen = !userOpen" 
                                     class="inline-flex items-center px-3 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-navy-50 to-navy-100 text-navy-900 hover:from-navy-100 hover:to-navy-200 focus:outline-none transition-all duration-300 shadow-sm hover:shadow">
                                 <span class="w-8 h-8 rounded-full bg-gradient-to-br from-navy-700 to-navy-900 text-white flex items-center justify-center mr-2 text-sm font-semibold shadow-inner">
                                     {{ substr(Auth::user()->name, 0, 1) }}
@@ -141,7 +141,7 @@
 
                 <!-- Mobile Hamburger -->
                 <div class="flex items-center sm:hidden">
-                    <button @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-lg text-gray-500 hover:text-navy-900 hover:bg-gray-100 focus:outline-none transition-all duration-300">
+                    <button type="button" @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-lg text-gray-500 hover:text-navy-900 hover:bg-gray-100 focus:outline-none transition-all duration-300">
                         <svg class="h-6 w-6 transition-transform duration-300" :class="{ 'rotate-90': open }" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                             <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
