@@ -2,8 +2,6 @@
 
 Unicourse adalah platform LMS (Learning Management System) sederhana namun powerful yang dibangun dengan **Laravel 11**. Sistem ini memungkinkan pengguna untuk menjelajahi kursus, mendaftar, dan mengakses materi pembelajaran. Dilengkapi dengan Panel Admin yang responsif (Mobile & Desktop) untuk pengelolaan konten.
 
-![Unicourse Preview](/public/storage/logo-unicourse.png)
-_(Ganti link gambar jika ada preview)_
 
 ## 🚀 Fitur Utama
 
